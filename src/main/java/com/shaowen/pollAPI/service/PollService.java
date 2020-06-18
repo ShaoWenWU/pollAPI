@@ -26,9 +26,18 @@ public class PollService {
     }
 
     public void save(List<Poll> polls) {
-        System.out.println(">>>"+polls);
         pollRepository.saveAll(polls);
     }
 
-//    public PollService(){}
+    public List<Poll> findByTitleContaining(String title){
+        return pollRepository.findByTitleContaining(title);
+    }
+
+    public List<Poll> findByInitiator_NameContaining(String name) {
+        return pollRepository.findByInitiator_NameContaining(name);
+    }
+
+    public List<Poll> findByInitiatedAfter(Long initiated){
+        return pollRepository.findByInitiatedAfter(initiated);
+    }
 }
