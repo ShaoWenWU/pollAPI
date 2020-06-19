@@ -4,7 +4,6 @@ import com.shaowen.pollAPI.domain.Poll;
 import com.shaowen.pollAPI.repository.PollRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
 
 @Service

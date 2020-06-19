@@ -1,9 +1,10 @@
-package com.shaowen.pollAPI.repository;
+package com.shaowen.pollAPI;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.shaowen.pollAPI.domain.Initiator;
 import com.shaowen.pollAPI.domain.Poll;
+import com.shaowen.pollAPI.repository.PollRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
