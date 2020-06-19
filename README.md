@@ -2,7 +2,7 @@
 
 #### Description
 
-Doodle Backend Engineer coding challenge
+Backend Engineer coding challenge
 
 
 
@@ -22,24 +22,44 @@ Prepare dependencies, docker images and generate image  by using `Dockerfile`
 
 ## Docker file
 
-### Build Docker Image
+### Docker Image
+
+#### Build Docker Image
 
 ```
 docker build -t pollapi .
 ```
 
-### Run Docker Image
+#### Run Docker Image
 
 ```
 docker run -d -p 8080:8080 pollapi
 ```
 
-### Localhost connection
+#### Localhost connection
 
-Now you can connect the API with localhost:8080. For example to get the list of polls in the database:
+Now you can connect the API with localhost:8080. For example to see the API documentation under this url:
 
 ```
-http://localhost:8080/polls/list
+http://localhost:8080/swagger-ui.html
+```
+
+
+
+### Docker compose
+
+Service is defined in `docker-compose.yml` so they can be run in an isolated environment.
+
+```
+docker-compose up
+```
+
+#### Localhost connection
+
+Now you can connect the API with localhost:8080. For example to see the API documentation under this url:
+
+```
+http://localhost:8080/swagger-ui.html
 ```
 
 
