@@ -17,7 +17,6 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Data
 @Entity
-@Getter
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name = "polls")
@@ -52,5 +51,9 @@ public class Poll {
 
   public Initiator getInitiator() {
     return initiator;
+  }
+
+  public String getTitle() {
+    return title;
   }
 }

@@ -44,4 +44,16 @@ public class PollRepositoryTest {
     assertThat(foundPoll.getInitiator().getName()).isEqualTo("John Doe");
   }
 
+  @Test
+  public void whenFindByTitle_thenReturnTitle() {
+    Poll foundPoll = pollRepository.findByTitleContaining("Qui sont les superhéros Marvel les plus oufs?").get(0);
+    assertThat(foundPoll.getTitle()).isEqualTo("Qui sont les superhéros Marvel les plus oufs?");
+  }
+
+  @Test
+  public void whenFindByInitiatedAfter_thenReturnPoll() {
+    Poll foundPoll = pollRepository.findByInitiatedAfter(1485521569055L).get(0);
+    assertThat(foundPoll.getTitle()).isEqualTo("Qui sont les superhéros Marvel les plus oufs?");
+  }
+
 }
