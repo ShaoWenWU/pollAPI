@@ -1,6 +1,6 @@
 package com.shaowen.pollAPI.exception;
 
-public class BizException extends RuntimeException{
+public class BizException extends RuntimeException {
 
   protected String errorCode;
   protected String errorMsg;

@@ -17,6 +17,7 @@ public class GlobalExceptionHandler {
 
   /**
    * Custom exception handling
+   *
    * @param req
    * @param e
    * @return
@@ -30,40 +31,43 @@ public class GlobalExceptionHandler {
 
   /**
    * Null pointer exception handling 400
+   *
    * @param req
    * @param e
    * @return
    */
-  @ExceptionHandler(value =NullPointerException.class)
+  @ExceptionHandler(value = NullPointerException.class)
   @ResponseBody
-  public ResultBody exceptionHandler(HttpServletRequest req, NullPointerException e){
-    logger.error("Null pointer error！Message:",e);
+  public ResultBody exceptionHandler(HttpServletRequest req, NullPointerException e) {
+    logger.error("Null pointer error！Message:", e);
     return ResultBody.error(CommonEnum.BODY_NOT_MATCH);
   }
 
   /**
    * Error Page 404
+   *
    * @param req
    * @param e
    * @return
    */
   @ExceptionHandler(value = NoHandlerFoundException.class)
   @ResponseBody
-  public ResultBody NoHandlerFoundExceptionHandler(HttpServletRequest req, Exception e){
-    logger.error("Other exception！Message:",e);
+  public ResultBody NoHandlerFoundExceptionHandler(HttpServletRequest req, Exception e) {
+    logger.error("Other exception！Message:", e);
     return ResultBody.error(CommonEnum.NOT_FOUND);
   }
 
   /**
    * Other exceptions
+   *
    * @param req
    * @param e
    * @return
    */
-  @ExceptionHandler(value =Exception.class)
+  @ExceptionHandler(value = Exception.class)
   @ResponseBody
-  public ResultBody exceptionHandler(HttpServletRequest req, Exception e){
-    logger.error("Other exception！Message:",e);
+  public ResultBody exceptionHandler(HttpServletRequest req, Exception e) {
+    logger.error("Other exception！Message:", e);
     return ResultBody.error(CommonEnum.INTERNAL_SERVER_ERROR);
   }
 

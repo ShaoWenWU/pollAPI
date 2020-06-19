@@ -2,13 +2,13 @@ package com.shaowen.pollAPI.Result;
 
 import com.shaowen.pollAPI.exception.BaseErrorInfoInterface;
 import enums.CommonEnum;
-import org.json.JSONObject;
 
 public class ResultBody {
 
   private String code;
   private String message;
   private Object result;
+
   public ResultBody() {
   }
 
@@ -17,35 +17,10 @@ public class ResultBody {
     this.message = errorInfo.getResultMsg();
   }
 
-  public String getCode() {
-    return code;
-  }
-
-  public void setCode(String code) {
-    this.code = code;
-  }
-
-  public String getMessage() {
-    return message;
-  }
-
-  public void setMessage(String message) {
-    this.message = message;
-  }
-
-  public Object getResult() {
-    return result;
-  }
-
-  public void setResult(Object result) {
-    this.result = result;
-  }
-
   /**
    * Success
    *
    * @return
-   *
    */
   public static ResultBody success() {
     return success(null);
@@ -53,6 +28,7 @@ public class ResultBody {
 
   /**
    * Success
+   *
    * @param data
    * @return
    */
@@ -89,7 +65,7 @@ public class ResultBody {
   /**
    * error
    */
-  public static ResultBody error( String message) {
+  public static ResultBody error(String message) {
     ResultBody rb = new ResultBody();
     rb.setCode("-1");
     rb.setMessage(message);
@@ -97,9 +73,28 @@ public class ResultBody {
     return rb;
   }
 
-//  @Override
-//  public String toString() {
-//    return JSONObject.toJSONString(this);
-//  }
+  public String getCode() {
+    return code;
+  }
+
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  public String getMessage() {
+    return message;
+  }
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
+
+  public Object getResult() {
+    return result;
+  }
+
+  public void setResult(Object result) {
+    this.result = result;
+  }
 
 }
