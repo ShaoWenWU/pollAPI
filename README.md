@@ -48,6 +48,7 @@ I focus on the **end-to-end** software development process, according to followi
 4. Testing 
 5. Deployment
 6. Maintenance and Updates
+   - Use Google Java code formatter
 
 
 
