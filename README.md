@@ -20,6 +20,28 @@ Prepare dependencies, docker images and generate image  by using `Dockerfile`
 
 - JDK 1.8
 
+## Docker file
+
+### Build Docker Image
+
+```
+docker build -t pollapi .
+```
+
+### Run Docker Image
+
+```
+docker run -d -p 8080:8080 pollapi
+```
+
+### Localhost connection
+
+Now you can connect the API with localhost:8080. For example to get the list of polls in the database:
+
+```
+http://localhost:8080/polls/list
+```
+
 
 
 ## Functionality
