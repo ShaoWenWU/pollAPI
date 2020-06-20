@@ -169,7 +169,7 @@ Focused on the **end-to-end** software development process, according to followi
 - Query
   - Simple query :ballot_box_with_check:
   - Query combination
-  - more flexible quries
+  - more flexible queries
 - Testing
   - Unit testing :ballot_box_with_check:
   - Integration testing

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/polls")
-@Api(tags = { "Poll Controller" })
+@Api(tags = {"Poll Controller"})
 public class PollController {
 
   @Autowired

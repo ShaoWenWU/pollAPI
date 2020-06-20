@@ -1,19 +1,12 @@
 package com.shaowen.pollAPI.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.util.UUID;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Tolerate;
-import org.hibernate.annotations.GenericGenerator;
 
 @Data
 @Entity
